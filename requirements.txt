@@ -1,0 +1,6 @@
+Flask==2.3.3
+Flask-CORS==4.0.0
+langgraph==0.2.0
+langchain-core==0.2.0
+langchain-google-genai==1.0.8
+python-dotenv==1.0.0

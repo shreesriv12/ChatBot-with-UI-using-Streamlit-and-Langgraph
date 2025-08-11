@@ -9,8 +9,12 @@ import sqlite3
 
 load_dotenv()
 
-llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash-latest") # <--- Change is here
+import os
 
+llm = ChatGoogleGenerativeAI(
+    model="gemini-1.5-flash-latest", 
+    google_api_key=os.getenv("GOOGLE_API_KEY")
+)
 class ChatState(TypedDict):
     messages: Annotated[list[BaseMessage], add_messages]
 
